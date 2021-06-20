@@ -16,7 +16,6 @@ def parse_args():
 
 def retrieve_mac_details():
     mac_address=vars(parse_args())
-    import pdb;pdb.set_trace()
     if re.match("[0-9a-f]{2}([-:])[0-9a-f]{2}(\\1[0-9a-f]{2}){4}$", mac_address['macaddress'].lower()):
         env_var = os.environ
         api_key = env_var['API_KEY']
